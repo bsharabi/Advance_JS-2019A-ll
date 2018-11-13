@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script src="app.js"></script>
+</head>
+<body>
+    <h1>Input for population range:</h1>
+    <div>
+        <p>Min:</p>
+        <input type="number" id="min" value="100000"/>
+    </div>
+
+    <div>
+        <p>Max:</p>
+        <input type="number" id="max" value="1000000000"/>
+    </div>
+
+    <button onclick="filterCountries()">submit</button>
+
+    <h1>Result</h1>
+    <table border="1">
+        <tr>
+            <td><h2>Country Name</h2></td>
+            <td><h2>Country population</h2></td>
+        </tr>
+
+        <tbody id="res">
+
+        </tbody>
+    </table>
+</body>
+</html>

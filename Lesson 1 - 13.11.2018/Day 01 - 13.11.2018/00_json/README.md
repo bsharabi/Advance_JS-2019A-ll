@@ -7,6 +7,11 @@
 * The input numbers are the range of the population
 * Show in a table all the countries that have the population in the requierd range
 * Each row in the table will contain a `<td>` with the country name, and a `<td>` with the country population
+* Examle for result:   
+
+![picture](result.png)
+
+***
 
 
 ### Good luck
