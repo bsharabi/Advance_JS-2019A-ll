@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+
+      function func(){
+
+        //return array of all elements of p tag
+       let elemnt1 = document.getElementsByTagName("p");
+
+
+       //return the element with the "res" tag
+       let elemnt2 = document.getElementById("res");
+
+
+       //return array of all elements of h1 tag
+       let elemnt3 = document.getElementsByTagName("h1");
+
+
+        //return array of all elements with class "cls"
+       let elemnt4 = document.getElementsByClassName("cls");
+    
+
+
+       console.log("elemnt1",elemnt1);
+       console.log("elemnt2",elemnt2);
+       console.log("elemnt3",elemnt3);
+       console.log("elemnt4",elemnt4);
+      } 
+       
+    </script>
+
+</head>
+<body onload="func()">
+    <h1>Hello</h1>
+    <p id="res">Good morning</p>
+    <p class="cls">Ariel uni</p>
+    <p class="cls">Israel</p>
+</body>
+</html>

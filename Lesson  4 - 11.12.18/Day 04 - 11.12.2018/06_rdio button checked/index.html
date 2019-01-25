@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function addEventToRadio() {
+            
+            //here we get an array with all the elements that have a name "drink"
+            let elementsArray = document.getElementsByName("drink");
+
+            for (let i = 0; i < elementsArray.length; i++) {
+
+                //here we register this html tag to call the "func" function 
+                //each time the "change" event happens
+                //NOTE: by default when we call the "func" function - the "event" will be passed to the function
+                elementsArray[i].addEventListener("change", func)
+            }
+        }
+
+
+        function func(param) {
+             document.getElementById("res").innerHTML=param.target.value;
+        }
+    </script>
+</head>
+
+<body onload="addEventToRadio()">
+    <h1>The best drink is:</h1>
+    <div>
+        <input type="radio" value="Water" name="drink" />
+        <label>Water</label>
+    </div>
+    <div>
+        <input type="radio" value="Wine" name="drink" />
+        <label>Wine</label>
+    </div>
+    <div>
+        <input type="radio" value="Coffe" name="drink" />
+        <label>Coffe</label>
+    </div>
+
+
+    <h2>You have chosen: <span id="res"></span></h2>
+</body>
+
+</html>

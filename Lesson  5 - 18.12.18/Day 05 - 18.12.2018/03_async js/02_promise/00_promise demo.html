@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <SCRIPT>
+
+        let globalVar = true;
+
+        function MyPromise(func) {
+
+            //the scope is only in the function
+            let resolve, reject;
+
+
+            this.then = (f1) => {
+                resolve = f1;
+                return this;
+            }
+
+            this.catch = (f2) => {
+                reject = f2;
+                return this;
+            }
+
+            this.demo = () => {
+                func(resolve, reject);
+            }
+
+
+
+        }
+
+
+        let p = new MyPromise(
+            (resolve, reject) => {
+                setTimeout(() => {
+                    globalVar ? resolve("OK") : reject(" NOT OK");
+                }, 7000)
+            });
+
+        p
+            .then((x) => { console.log("resolve got: ", x) })
+            .catch((err) => { console.log("reject got: ", err) });
+
+
+        p.demo();
+    </SCRIPT>
+</head>
+
+<body>
+
+</body>
+
+</html>

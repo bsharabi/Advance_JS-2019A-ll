@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<style>
+    #res{
+        position: absolute;
+        right: 0;
+        left:0;
+        top:0;
+        bottom: 0; 
+    }
+    </style>
+        <script>
+               /*function func(param)
+                {
+                   document.getElementById("res").innerHTML=`
+                        <p>${param.x}</p>
+                        <p>${param.y}</p>
+                   `;
+                }*/
+                function func(param)
+                {
+                    res=""
+                    res=param.x+" "+param.y
+                   document.getElementById("res").innerHTML=res
+                        
+                   
+                }
+            </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <div style="background-color:white" id="res" onmousemove="func(event)">
+
+    </div>
+
+</body>
+
+</html>

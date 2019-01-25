@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <style>
+        button {
+            display: inline-block;
+            margin: 50px;
+        }
+
+        .c1 {
+            color: magenta;
+        }
+
+
+        .c2 {
+            border-color: aqua;
+            border-width: 2px;
+            border-style: dashed;
+        }
+    </style>
+
+    <script>
+
+        function changeContent() {
+            let element = document.getElementById("res");
+            element.innerHTML = "<span>Ariel <br/> Uni </span>";
+        }
+
+
+        function changeText() {
+            let element = document.getElementById("res");
+            element.innerText = "<span>Ariel <br/> Uni </span>";
+        }
+
+
+        function changeBackground() {
+            let element = document.getElementById("res");
+            element.style.backgroundColor = "#ff0066";
+        }
+
+
+        function addEvent() {
+            let element = document.getElementById("res");
+            element.addEventListener("mouseover", () => {
+                alert("Mouse Over")
+            });
+        }
+
+
+        function addClass() {
+            let element = document.getElementById("res");
+            element.classList.add("c1");
+        }
+
+
+
+        function removeClass() {
+            let element = document.getElementById("res");
+            element.classList.remove("c1");
+        }
+
+
+        function toggleClass() {
+            let element = document.getElementById("res");
+            element.classList.toggle("c2");
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1 id="res">Hello</h1>
+
+    <button onclick="changeContent()">changeContent</button>
+    <button onclick="changeText()">changeText</button>
+    <button onclick="changeBackground()">changeBackground</button>
+    <button onclick="addEvent()">addEvent</button>
+    <button onclick="addClass()">addClass</button>
+    <button onclick="removeClass()">removeClass</button>
+    <button onclick="toggleClass()">toggleClass</button>
+</body>
+
+</html>

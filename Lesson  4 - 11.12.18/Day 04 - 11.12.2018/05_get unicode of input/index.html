@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function func(param) {
+            console.log(param);
+            document.getElementById("res").innerHTML += `
+                <li>key: ${param.key} , keyCode:: ${param.keyCode}</li>`;
+        }
+    </script>
+</head>
+
+<body>
+    <label>Enter text:</label>
+    <input type="text" onkeyup="func(event)" />
+
+    <hr />
+    <div>
+        <h1>The unicode of the input:</h1>
+        <ul id="res">
+        </ul>
+    </div>
+</body>
+
+</html>

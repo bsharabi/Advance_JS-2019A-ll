@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+
+        //Method 1
+        function myFunc(str1) {
+            return `I got loli ${str1}`;
+        }
+
+         function exeFunc(parameter) {
+            let res = parameter("Hello from exeFunc");
+            console.log(`exeFunc got from p: ${res}`)
+        }
+
+            exeFunc(myFunc);
+
+        //Method 2
+        exeFunc(function myFunc(str1) {
+            return `I got lohhhhhli ${str1}`;
+        })
+         function exeFunc(parameter) {
+            let res = parameter("Hello from exeFunc");
+            console.log(`exeFunc got from p: ${res}`)
+         }
+
+        //Method 3
+         function exeFunc(parameter) {
+            let res = parameter("Hello from exeFunc");
+            console.log(`exeFunc got from p: ${res}`)
+
+        }
+        exeFunc(myFunc=(str1)=>`I gotgggg lohhhhhli ${str1}`)
+        // חופף לפונקציה מעל רק שזוהי פונקציה מקוצרת על פי כלל  פרמטר 1
+        exeFunc(myFunc=(str1)=>{ return `I gotgggg lohhhhhli ${str1}`;})
+
+        //Method 4
+        myFunc=(str1)=>{ return `I gotgggg lohhhhhli ${str1}`;}
+        
+        function exeFunc() {
+            let res = myFunc("Hello from exeFunc");
+            console.log(`exeFunc got from p: ${res}`)
+        }
+        
+        exeFunc()
+
+
+/*
+        exeFunc((x) => { return `I got ${x}` });
+        exeFunc(y => `I got ${y}`);
+        exeFunc(function (z) { return `I got ${z}` });*/
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

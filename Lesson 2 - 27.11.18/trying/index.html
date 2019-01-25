@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        let req = new XMLHttpRequest();
+
+        console.log(req)
+        req.open("GET", "https://restcountries.eu/rest/v2/all?fields=name;flag")
+        console.log(req)
+        req.onreadystatechange=()=>
+        {
+
+          
+        }
+
+        req.ontimeout=(event)=>
+        {}
+        req.send()
+        console.log(req)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

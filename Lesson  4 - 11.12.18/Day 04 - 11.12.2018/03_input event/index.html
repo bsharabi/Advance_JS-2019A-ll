@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function func(param) {
+           let myColor=param.target.value;
+            document.getElementById("res").style.backgroundColor= myColor;
+        }
+    </script>
+</head>
+
+<body>
+    <label>Choose a color:</label>
+    <input type="color" onchange="func(event)"/>
+    <hr/>
+    <div id="res">test color</div>
+    
+</body>
+
+</html>

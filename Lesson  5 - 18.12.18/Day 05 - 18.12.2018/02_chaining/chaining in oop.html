@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+
+        //constructor function - is called by "new" +  function name
+        function Dog(age) {
+
+            this.getInfo1 = () => {
+                console.log(`hello dog 1`);
+                return this;
+            }
+
+
+            this.getInfo2 = () => {
+                console.log(`hello dog 2`)
+            }
+        }
+
+
+        let dog1 = new Dog();
+        dog1.getInfo1().getInfo2();
+
+
+        let dog2 = new Dog();
+        let tempDog = dog2.getInfo1();
+        tempDog.getInfo2();
+
+        /*
+        OUTPUT:
+        ___________________
+        
+        hello dog 1
+        hello dog 2
+        hello dog 1
+        hello dog 2
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        function func1(num) {
+            return new Promise((x, y) => { y(num ** num) });
+        }
+
+
+        func1(3)
+            .then(x => console.log("normal call", x))
+            .catch(err => console.log("normal catch", err))
+
+
+
+        async function func2() {
+            try {
+                let res = await func1(3);
+                console.log("await call", res)
+            }
+            catch (err) {
+                console.log("await catch", err)
+            }
+        }
+
+        func2();
+
+        /*
+        OUTPUT:
+        __________________
+        normal call 27
+        await call 27
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

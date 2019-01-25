@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        /*
+        Every function with async decleration:
+             1) can use `await` keyword
+             2) the returned value is sent as resolve of a promise
+        */
+       
+        async function sub(n1, n2) {           
+            return n1 - n2;  //this is resolve promise
+        }
+
+        let print = msg => {console.log(msg)};
+
+        sub(4, 1).then(print).catch(print);
+
+        sub(4, 4).then(print).catch(print);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

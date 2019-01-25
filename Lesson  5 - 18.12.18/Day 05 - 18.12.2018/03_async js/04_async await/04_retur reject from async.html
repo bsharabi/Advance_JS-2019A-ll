@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        /*
+        Every function with async decleration:
+             1) can use `await` keyword
+             2) the returned value is sent as resolve of a promise
+        */
+       
+        async function sub(n1, n2) {           
+            throw new Error("Sorry, I have error");  //this is reject promise
+        }
+
+
+        sub(4, 1)
+        .then(msg => {console.log("resolve",msg)})
+        .catch(err => {console.log("reject",err)});
+
+        sub(4, 4)
+        .then(msg => {console.log("resolve",msg)})
+        .catch(err => {console.log("reject",err)});
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
